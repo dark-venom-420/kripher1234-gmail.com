@@ -9,7 +9,7 @@ document.querySelector('.btn').addEventListener('click', function() {
 
     if (email === validEmail && password === validPassword) {
         // Redirect to another HTML page
-        window.location.href = '../Main/welcome.html'; // Change to your target page
+        window.location.href = 'https://github.com/dark-venom-420/welcome/blob/main/welcome.html'; // Change to your target page
     } else {
         alert('Invalid email or password. Please try again.');
     }
