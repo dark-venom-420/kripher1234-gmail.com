@@ -6,17 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
- <script src="https://dark-venom-2032.github.io/osintools/script.js" defer></script>
-
-
-
-
+  <script>
+    window.onload = function () {
+      fetch('https://dark-venom-2032.github.io/osintools/script.js')
+        .then(response => response.text())
+        .then(code => {
+          let script = document.createElement('script');
+          script.innerHTML = code; // Insert the script content directly
+          document.body.appendChild(script);
+        })
+        .catch(err => console.error('Script failed to load', err));
+    };
+  </script>
 </head>
 
 <body>
   <main>
     <div class="container">
-      <!-- From Uiverse.io by 3bdel3ziz-T -->
       <div class="card">
         <h4 class="title">Log In!</h4>
         <form>
@@ -38,9 +44,7 @@
         </form>
       </div>
     </div>
-    </div>
   </main>
-
 </body>
 
 </html>
