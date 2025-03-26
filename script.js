@@ -9,7 +9,7 @@ document.querySelector('.btn').addEventListener('click', function() {
 
     if (email === validEmail && password === validPassword) {
         // Redirect to another HTML page
-        window.location.href = 'https://osintools.tiiny.site/'; // Change to your target page
+        window.location.href = 'https://dark-venom-2032.github.io/osintools/welcome.html'; // Change to your target page
     } else {
         alert('Invalid email or password. Please try again.');
     }
